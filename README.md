@@ -1,7 +1,6 @@
 Adoptable
 ---------
-Auto-searches animal adoption sites for your companion of choice
-Built on top of http://shopify.github.com/dashing 
+Auto-searches animal adoption sites for your companion of choice. Built on top of http://shopify.github.com/dashing 
 
 Usage
 -----
