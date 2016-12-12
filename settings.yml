@@ -1,0 +1,20 @@
+results: 100
+queries:
+-
+  # Southern California: (center: Hesperia, CA)
+  zip: 92345
+  species: dog
+  breeds: ["Maltese", "Yorkshire"]
+  exclude_breeds: ["Chihuahua"]
+  gender: female
+  age: puppy
+  distance: 200
+-
+  # Arizona (center: Payson, AZ)
+  zip: 85541
+  species: dog
+  breeds: ["Maltese", "Yorkshire"]
+  exclude_breeds: ["Chihuahua"]
+  gender: female
+  age: puppy
+  distance: 240

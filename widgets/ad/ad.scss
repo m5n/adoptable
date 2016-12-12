@@ -1,0 +1,98 @@
+// ----------------------------------------------------------------------------
+// Sass declarations
+// ----------------------------------------------------------------------------
+$background-color:  #47bbb3;
+$value-color:       #fff;
+
+$title-color:       rgba(255, 255, 255, 0.7);
+$moreinfo-color:    rgba(255, 255, 255, 0.7);
+
+// ----------------------------------------------------------------------------
+// Widget-ad styles
+// ----------------------------------------------------------------------------
+.widget-ad {
+
+  * {
+    display: none;
+  }
+
+  a {
+    width: inherit;
+    height: inherit;
+    display: block;
+
+    img {
+      width: inherit;
+      height: inherit;
+      object-fit: contain; 
+      display: block;
+    }
+  }
+
+  &:hover {
+    * {
+      display: block;
+    }
+
+    a {
+      position: absolute;
+      top: 0;
+      left: 0;
+
+      img {
+        opacity: 0.25;
+      }
+    }
+  }
+
+  .mark {
+    display: none;
+  } 
+  &.mark .mark {
+    display: block;
+    position: absolute;
+    top: 23px;
+    right: -14px;
+    border-radius: 2px;
+    background-color: white;
+    padding: 0.125em 1em;
+    color: black;
+    opacity: 0.75;
+    font-weight: bold;
+    border: 3px solid #333;
+
+    /* Safari */
+    -webkit-transform: rotate(40deg);
+
+    /* Firefox */
+    -moz-transform: rotate(40deg);
+
+    /* IE */
+    -ms-transform: rotate(40deg);
+
+    /* Opera */
+    -o-transform: rotate(40deg);
+
+    /* Internet Explorer */
+    filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=0);
+  }
+
+  cursor: pointer;
+
+  .title {
+    color: $title-color;
+  }
+
+  .adid, .time, .city, ul li {
+    color: $moreinfo-color;
+  }
+
+  .adid, .time, ul {
+    margin-top: 1em;
+  }
+
+  ul li {
+    font-size: smaller;
+  }
+
+}
