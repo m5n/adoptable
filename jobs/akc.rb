@@ -30,16 +30,13 @@ Adoptable::Job.new(name).run do |target_species, target_breeds, target_exclude_b
 
   doc = Nokogiri::HTML(open("http://marketplace.akc.org/search?breed=#{breed_id}&gender=has-#{target_gender.downcase}&location=#{target_zip}&radius=#{target_distance}"))
 
-  # Avoid rate limiting
-  sleep(5)
-
   doc.css('.search-results__item a').each do |elt|
-    href = elt.attr('href')
-
-    doc = Nokogiri::HTML(open("http://marketplace.akc.org#{href}"))
-
     # Avoid rate limiting
+    # Also do first time because we just got the shelters
     sleep(5)
+
+    href = elt.attr('href')
+    doc = Nokogiri::HTML(open("http://marketplace.akc.org#{href}"))
 
     # Avoid "no _dump_data is defined for class Nokogiri::XML::Attr" error by converting attr() to string in various places
     default_photo = doc.css('.storefront-cover img')[0].attr('src').to_s

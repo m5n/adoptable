@@ -21,11 +21,13 @@ module Adoptable
         p "#{@name}: job running"
 
         ads = []
+        first_time = true
         Sinatra::Application.settings.queries.each do |q|
-          ads += yield(q["species"], q["breeds"], q["exclude_breeds"], q["gender"], q["age"], q["zip"], q["distance"])
-
           # Avoid rate limiting
-          sleep(5)
+          sleep(5) if !first_time
+          first_time = false
+
+          ads += yield(q["species"], q["breeds"], q["exclude_breeds"], q["gender"], q["age"], q["zip"], q["distance"])
         end
 
         ads.uniq! { |a| a.id }

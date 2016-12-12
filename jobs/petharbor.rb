@@ -19,9 +19,6 @@ Adoptable::Job.new(name).run do |target_species, target_breeds, target_exclude_b
   shelter_ids = doc.css('.searchResultRow').collect { |elt| elt.css('input').attr('name').value[3..-1] } 
   p "#{name}: Searching #{shelter_ids.length} shelters in #{target_zip}"
 
-  # Avoid rate limiting
-  sleep(5)
-
   ads = []
 
  target_breeds.each do |breed|
@@ -38,6 +35,10 @@ Adoptable::Job.new(name).run do |target_species, target_breeds, target_exclude_b
   dummy_time = Time.now
   # Search the max #shelters at a time
   while shelter_ids.length > 0
+    # Avoid rate limiting
+    # Also do first time because we just got the shelters
+    sleep(5)
+
     subset = shelter_ids.slice!(0, max_shelters)
     doc = Nokogiri::HTML(open("http://petharbor.com/results.asp?searchtype=ADOPT&stylesheet=include/default.css&frontdoor=1&grid=1&friends=1&samaritans=1&nosuccess=0&rows=24&imght=120&imgres=thumb&tWidth=200&view=sysadm.v_animal&fontface=arial&fontsize=10&zip=#{target_zip}&miles=#{distance}&shelterlist=#{subset.map { |s| "%27#{s}%27" }.join(",")}&atype=#{target_species.downcase}&ADDR=undefined&nav=1&start=4&nomax=1&page=1&where=type_#{target_species.upcase},gender_#{gender},age_#{age},breed_#{breed.upcase}"))
     doc.css('.gridResult').each do |elt|
@@ -62,9 +63,6 @@ Adoptable::Job.new(name).run do |target_species, target_breeds, target_exclude_b
 
       ads.push(Adoptable::Ad.new(name, id, time, photo, url, city, notes))
     end
-
-    # Avoid rate limiting
-    sleep(5)
   end
 
  end
