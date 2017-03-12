@@ -16,10 +16,23 @@ Adoptable::Job.new(name).run do |target_species, target_breeds, target_exclude_b
   breed_id = 
     # TODO: add all breeds
     case breed.downcase
+    when 'bolognese' then 'Bichon-Frise'
+    when 'cavalier king charles spaniel' then 'Cavalier-King-Charles-Spaniel'
+    when 'coton de tulear' then 'Coton-De-Tulear'
+    when 'english toy spaniel' then 'Cavalier-King-Charles-Spaniel'
+    when 'cocker spaniel' then 'Cocker-Spaniel'
+    when 'english cocker spaniel' then 'English-Cocker-Spaniel'
     when 'havanese' then 'Havanese'
+    when 'italian greyhound' then 'Italian-Greyhound'
     when 'maltese' then 'Maltese'
+    when 'miniature poodle' then 'Poodle-Miniature'
+    when 'pomeranian' then 'Pomeranian'
+    when 'papillon' then 'Papillon'
+    when 'toy poodle' then 'Poodle-Toy'
+    when 'portuguese podengo' then 'Podengo-Portugueso'
+    when 'portuguese podengo pequeno' then 'Podengo-Portugueso'
     when 'yorkie' then 'Yorkshire-Terrier-Yorkie'
-    when 'yorkshire' then 'Yorkshire-Terrier-Yorkie'
+    when 'yorkshire terrier' then 'Yorkshire-Terrier-Yorkie'
     else raise "Unknown breed: #{breed}"
     end
 
@@ -46,7 +59,7 @@ Adoptable::Job.new(name).run do |target_species, target_breeds, target_exclude_b
 
     next if target_exclude_breeds.any? { |b| !breed.upcase[b.upcase].nil? }
 
-    ads.push(Adoptable::Ad.new(name, id, time -= 24 * 60 * 60, photo, url, city, notes))
+    ads.push(Adoptable::Ad.new(name, id, time -= 24 * 60 * 60, breed, photo, url, city, notes))
   end
  end
 

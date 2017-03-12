@@ -83,11 +83,11 @@ $moreinfo-color:    rgba(255, 255, 255, 0.7);
     color: $title-color;
   }
 
-  .adid, .time, .city, ul li {
+  .adid, .breed, .time, .city, ul li {
     color: $moreinfo-color;
   }
 
-  .adid, .time, ul {
+  .adid, .time, .city, ul {
     margin-top: 1em;
   }
 

@@ -20,19 +20,307 @@ Adoptable::Job.new(name).run do |target_species, target_breeds, target_exclude_b
     else raise "Unknown species: #{target_species}"
     end
 
+  # document.querySelectorAll('[name=breed_id] option').forEach(function (o) { if (o.getAttribute('value')) { console.log('    when \'' + o.innerText.toLowerCase() + '\' then ' + o.getAttribute('value')); }})
   breed_id = 
-    # TODO: add all breeds
     case breed.downcase
+    when 'affenpinscher' then 1
+    when 'afghan hound' then 2
+    when 'airedale terrier' then 3
+    when 'akbash' then 4
+    when 'akita' then 5
+    when 'alaskan klee kai' then 6
+    when 'alaskan malamute' then 7
+    when 'american bulldog' then 8
+    when 'american eskimo dog' then 9
+    when 'american foxhound' then 10
+    when 'american hairless terrier' then 11
+    when 'american pit bull terrier' then 12
+    when 'american staffordshire terrier' then 13
+    when 'american water spaniel' then 14
+    when 'anatolian karabash dog' then 15
+    when 'anatolian shepherd' then 16
+    when 'appenzell mountain dog' then 17
+    when 'argentinian mastiff' then 18
+    when 'australian cattle dog/blue heeler' then 19
+    when 'australian kelpie' then 20
+    when 'australian shepherd' then 21
+    when 'australian terrier' then 22
+    when 'basenji' then 23
+    when 'basset griffon vendeen' then 24
+    when 'basset hound' then 25
+    when 'beagle' then 26
+    when 'bearded collie' then 27
+    when 'beauceron' then 28
+    when 'bedlington terrier' then 29
+    when 'belgian griffon' then 30
+    when 'belgian shepherd dog sheepdog' then 31
+    when 'belgian shepherd laekenois' then 32
+    when 'belgian shepherd malinois' then 33
+    when 'belgian shepherd tervuren' then 34
+    when 'bernese mountain dog' then 35
+    when 'bichon frise' then 36
+    when 'biewer' then 37
+    when 'black and tan coonhound' then 38
+    when 'black labrador retriever' then 39
+    when 'black mouth cur' then 40
+    when 'black russian terrier' then 41
+    when 'bloodhound' then 42
+    when 'blue lacy' then 43
+    when 'bluetick coonhound' then 44
+    when 'bobtail' then 45
+    when 'boerboel mastiff' then 46
+    when 'bolognese' then 47
+    when 'bordeaux' then 48
+    when 'border collie' then 49
+    when 'border terrier' then 50
+    when 'borzoi' then 51
+    when 'boston terrier' then 52
+    when 'bouvier des flandres' then 53
+    when 'boxer' then 54
+    when 'boykin spaniel' then 55
+    when 'brazilian mastiff' then 56
+    when 'briard' then 57
+    when 'brittany' then 58
+    when 'brussels griffon' then 59
+    when 'bull terrier' then 60
+    when 'bulldog' then 61
+    when 'bullmastiff' then 62
+    when 'cairn terrier' then 63
+    when 'canaan dog' then 64
+    when 'cane corso mastiff' then 65
+    when 'cardigan welsh corgi' then 66
+    when 'carolina dog' then 67
+    when 'catahoula leopard dog' then 68
+    when 'cattle dog' then 69
+    when 'caucasian sheepdog (caucasian ovtcharka)' then 70
+    when 'cavalier king charles spaniel' then 71
+    when 'chesapeake bay retriever' then 72
+    when 'chihuahua' then 73
+    when 'chinese crested-hairless' then 74
+    when 'chinese crested-powder puff' then 75
+    when 'chinese foo dog' then 76
+    when 'chinese shar-pei' then 77
+    when 'chinook' then 78
+    when 'chocolate labrador retriever' then 79
+    when 'chow chow' then 80
+    when 'cirneco delletna' then 81
+    when 'clumber spaniel' then 82
+    when 'cockapoo' then 83
+    when 'cocker spaniel' then 84
+    when 'collie' then 85
+    when 'coonhound' then 86
+    when 'corgi' then 87
+    when 'coton de tulear' then 88
+    when 'curly-coated retriever' then 89
+    when 'dachshund' then 90
+    when 'dalmatian' then 91
+    when 'dandie dinmont terrier' then 92
+    when 'danish broholmer' then 93
+    when 'deerhound' then 94
+    when 'doberman pinscher' then 95
+    when 'dogo argentino' then 96
+    when 'dogue de bordeaux' then 97
+    when 'dutch shepherd' then 98
+    when 'elkhound' then 99
+    when 'english bulldog' then 100
+    when 'english cocker spaniel' then 101
+    when 'english coonhound' then 102
+    when 'english foxhound' then 103
+    when 'english mastiff' then 104
+    when 'english pointer' then 105
+    when 'english setter' then 106
+    when 'english sheepdog' then 107
+    when 'english shepherd' then 108
+    when 'english springer spaniel' then 109
+    when 'english toy spaniel' then 110
+    when 'entlebucher' then 111
+    when 'eskimo dog' then 112
+    when 'eskimo spitz' then 113
+    when 'eurasier' then 114
+    when 'feist' then 115
+    when 'field spaniel' then 116
+    when 'fila brasileiro' then 117
+    when 'finnish lapphund' then 118
+    when 'finnish spitz' then 119
+    when 'flat-coated retriever' then 120
+    when 'fox terrier' then 121
+    when 'foxhound' then 122
+    when 'french brittany' then 123
+    when 'french bulldog' then 124
+    when 'french mastiff' then 125
+    when 'galgo spanish greyhound' then 126
+    when 'german pinscher' then 127
+    when 'german shepherd dog' then 128
+    when 'german shorthaired pointer' then 129
+    when 'german spitz' then 130
+    when 'german wirehaired pointer' then 131
+    when 'giant schnauzer' then 132
+    when 'glen of imaal terrier' then 133
+    when 'golden retriever' then 134
+    when 'gordon setter' then 135
+    when 'great dane' then 136
+    when 'great pyrenees' then 137
+    when 'greater swiss mountain dog' then 138
+    when 'greyhound' then 139
+    when 'halden hound (haldenstrover)' then 140
+    when 'harrier' then 141
     when 'havanese' then 142
+    when 'hollandse tulphond' then 143
+    when 'hound' then 144
+    when 'hovawart' then 145
+    when 'husky' then 146
+    when 'ibizan hound' then 147
+    when 'illyrian sheepdog' then 148
+    when 'irish setter' then 149
+    when 'irish terrier' then 150
+    when 'irish water spaniel' then 151
+    when 'irish wolfhound' then 152
+    when 'italian greyhound' then 153
+    when 'italian mastiff' then 154
+    when 'italian spinone' then 155
+    when 'jack russell terrier' then 156
+    when 'jack russell terrier (parson russell terrier)' then 157
+    when 'japanese chin' then 158
+    when 'jindo (korean)' then 159
+    when 'kai dog' then 160
+    when 'karelian bear dog' then 161
+    when 'keeshond' then 162
+    when 'kerry blue terrier' then 163
+    when 'kishu' then 164
+    when 'klee kai' then 165
+    when 'komondor' then 166
+    when 'kuvasz' then 167
+    when 'kyi leo' then 168
+    when 'labrador retriever' then 169
+    when 'lakeland terrier' then 170
+    when 'lancashire heeler' then 171
+    when 'leonberger' then 172
+    when 'lhasa apso' then 173
+    when 'löwchen' then 174
     when 'maltese' then 175
+    when 'manchester terrier' then 176
+    when 'maremma sheepdog' then 177
+    when 'markiesje' then 178
+    when 'mastiff' then 179
+    when 'mcnab' then 180
+    when 'mexican hairless' then 181
+    when 'miniature bull terrier' then 182
+    when 'miniature pinscher' then 183
+    when 'miniature schnauzer' then 184
+    when 'mountain cur' then 185
+    when 'mountain dog' then 186
+    when 'munsterlander' then 187
+    when 'neapolitan mastiff' then 188
+    when 'new guinea singing dog' then 189
+    when 'newfoundland dog' then 190
+    when 'norfolk terrier' then 191
+    when 'norwegian buhund' then 192
+    when 'norwegian elkhound' then 193
+    when 'norwegian lundehund' then 194
+    when 'norwich terrier' then 195
+    when 'nova scotia duck-tolling retriever' then 196
+    when 'old english sheepdog' then 197
+    when 'otterhound' then 198
+    when 'papillon' then 199
+    when 'parson russell terrier' then 200
+    when 'patterdale terrier (fell terrier)' then 201
+    when 'pekingese' then 202
+    when 'pembroke welsh corgi' then 203
+    when 'peruvian inca orchid' then 204
+    when 'peruvian inca orchid' then 205
+    when 'petit basset griffon vendeen' then 206
+    when 'pharaoh hound' then 207
+    when 'picardy shepherd' then 208
+    when 'pit bull terrier' then 209
+    when 'plott hound' then 210
+    when 'podengo portugueso' then 211
+    when 'portuguese podengo' then 211
+    when 'portuguese podengo pequeno' then 211
+    when 'pointer' then 212
+    when 'polish lowland sheepdog' then 213
+    when 'pomeranian' then 214
+    when 'poodle (miniature)' then 215
+    when 'miniature poodle' then 215
+    when 'poodle (standard)' then 216
+    when 'poodle (t-cup)' then 217
+    when 'poodle (toy)' then 218
+    when 'toy poodle' then 218
+    when 'poodle (unknown type)' then 219
+    when 'portuguese water dog' then 220
+    when 'presa canario' then 221
+    when 'pug' then 222
+    when 'puli' then 223
+    when 'pumi' then 224
+    when 'queensland heeler' then 225
+    when 'rat terrier' then 226
+    when 'red heeler' then 227
+    when 'redbone coonhound' then 228
+    when 'retriever' then 229
+    when 'rhodesian ridgeback' then 230
+    when 'rottweiler' then 231
+    when 'russian wolfhound' then 232
+    when 'saarlooswolfhond' then 233
+    when 'saint bernard' then 234
+    when 'saluki' then 235
+    when 'saluki greyhound' then 236
+    when 'samoyed' then 237
+    when 'schiller hound' then 238
+    when 'schipperke' then 239
+    when 'schnauzer' then 240
+    when 'scottish deerhound' then 241
+    when 'scottish terrier scottie' then 242
+    when 'sealyham terrier' then 243
+    when 'setter' then 244
+    when 'shar pei' then 245
+    when 'sheep dog' then 246
+    when 'shepherd' then 247
+    when 'shetland sheepdog sheltie' then 248
+    when 'shiba inu' then 249
+    when 'shih tzu' then 250
+    when 'siberian husky' then 251
+    when 'silky terrier' then 252
+    when 'skye terrier' then 253
+    when 'sloughi' then 254
+    when 'smooth fox terrier' then 255
+    when 'soft-coated wheaten terrier' then 256
+    when 'south russian ovcharka' then 257
+    when 'spaniel' then 258
+    when 'spanish mastiff' then 259
+    when 'spinone italiano' then 260
+    when 'spitz' then 261
+    when 'springer spaniel' then 262
+    when 'staffordshire bull terrier' then 263
+    when 'sussex spaniel' then 264
+    when 'swedish vallhund' then 265
+    when 'terrier' then 266
+    when 'thai ridgeback' then 267
+    when 'tibetan mastiff' then 268
+    when 'tibetan spaniel' then 269
+    when 'tibetan terrier' then 270
+    when 'tosa inu' then 271
+    when 'toy fox terrier' then 272
+    when 'toy terrier' then 273
+    when 'treeing walker coonhound' then 274
+    when 'vizsla' then 275
+    when 'weimaraner' then 276
+    when 'welsh corgi' then 277
+    when 'welsh springer spaniel' then 278
+    when 'welsh terrier' then 279
+    when 'west highland white terrier westie' then 280
+    when 'wheaten terrier' then 281
+    when 'whippet' then 282
+    when 'white german shepherd' then 283
+    when 'wire-haired pointing griffon' then 284
+    when 'wirehaired fox terrier' then 285
+    when 'wolf dog' then 286
+    when 'xoloitzcuintle/mexican hairless' then 287
+    when 'yellow labrador retriever' then 288
+    when 'yorkshire terrier yorkie' then 289
     when 'yorkie' then 289
-    when 'yorkshire' then 289
+    when 'yorkshire terrier' then 289
     else raise "Unknown breed: #{breed}"
     end
 
-=begin
-<select class="breed-select dim-first form-control js-select-breed select-area show-menu-arrow show-tick type" data-live-search="true" data-size="10" name="breed_id" title="Select Breeds (Optional)" style="display: none;"><option value="">Select Breeds (Optional)</option><option value="1">Affenpinscher</option><option value="2">Afghan Hound</option><option value="3">Airedale Terrier</option><option value="4">Akbash</option><option value="5">Akita</option><option value="6">Alaskan Klee Kai</option><option value="7">Alaskan Malamute</option><option value="8">American Bulldog</option><option value="9">American Eskimo Dog</option><option value="10">American Foxhound</option><option value="11">American Hairless Terrier</option><option value="12">American Pit Bull Terrier</option><option value="13">American Staffordshire Terrier</option><option value="14">American Water Spaniel</option><option value="15">Anatolian Karabash Dog</option><option value="16">Anatolian Shepherd</option><option value="17">Appenzell Mountain Dog</option><option value="18">Argentinian Mastiff</option><option value="19">Australian Cattle Dog/Blue Heeler</option><option value="20">Australian Kelpie</option><option value="21">Australian Shepherd</option><option value="22">Australian Terrier</option><option value="23">Basenji</option><option value="24">Basset Griffon Vendeen</option><option value="25">Basset Hound</option><option value="26">Beagle</option><option value="27">Bearded Collie</option><option value="28">Beauceron</option><option value="29">Bedlington Terrier</option><option value="30">Belgian Griffon</option><option value="31">Belgian Shepherd Dog Sheepdog</option><option value="32">Belgian Shepherd Laekenois</option><option value="33">Belgian Shepherd Malinois</option><option value="34">Belgian Shepherd Tervuren</option><option value="35">Bernese Mountain Dog</option><option value="36">Bichon Frise</option><option value="37">Biewer</option><option value="38">Black and Tan Coonhound</option><option value="39">Black Labrador Retriever</option><option value="40">Black Mouth Cur</option><option value="41">Black Russian Terrier</option><option value="42">Bloodhound</option><option value="43">Blue Lacy</option><option value="44">Bluetick Coonhound</option><option value="45">Bobtail</option><option value="46">Boerboel Mastiff</option><option value="47">Bolognese</option><option value="48">Bordeaux</option><option value="49">Border Collie</option><option value="50">Border Terrier</option><option value="51">Borzoi</option><option value="52">Boston Terrier</option><option value="53">Bouvier des Flandres</option><option value="54">Boxer</option><option value="55">Boykin Spaniel</option><option value="56">Brazilian Mastiff</option><option value="57">Briard</option><option value="58">Brittany</option><option value="59">Brussels Griffon</option><option value="60">Bull Terrier</option><option value="61">Bulldog</option><option value="62">Bullmastiff</option><option value="63">Cairn Terrier</option><option value="64">Canaan Dog</option><option value="65">Cane Corso Mastiff</option><option value="66">Cardigan Welsh Corgi</option><option value="67">Carolina Dog</option><option value="68">Catahoula Leopard Dog</option><option value="69">Cattle Dog</option><option value="70">Caucasian Sheepdog (Caucasian Ovtcharka)</option><option value="71">Cavalier King Charles Spaniel</option><option value="72">Chesapeake Bay Retriever</option><option value="73">Chihuahua</option><option value="74">Chinese Crested-Hairless</option><option value="75">Chinese Crested-Powder Puff</option><option value="76">Chinese Foo Dog</option><option value="77">Chinese Shar-Pei</option><option value="78">Chinook</option><option value="79">Chocolate Labrador Retriever</option><option value="80">Chow Chow</option><option value="81">Cirneco dellEtna</option><option value="82">Clumber Spaniel</option><option value="83">Cockapoo</option><option value="84">Cocker Spaniel</option><option value="85">Collie</option><option value="86">Coonhound</option><option value="87">Corgi</option><option value="88">Coton de Tulear</option><option value="89">Curly-Coated Retriever</option><option value="90">Dachshund</option><option value="91">Dalmatian</option><option value="92">Dandie Dinmont Terrier</option><option value="93">Danish Broholmer</option><option value="94">Deerhound</option><option value="95">Doberman Pinscher</option><option value="96">Dogo Argentino</option><option value="97">Dogue de Bordeaux</option><option value="98">Dutch Shepherd</option><option value="99">Elkhound</option><option value="100">English Bulldog</option><option value="101">English Cocker Spaniel</option><option value="102">English Coonhound</option><option value="103">English Foxhound</option><option value="104">English Mastiff</option><option value="105">English Pointer</option><option value="106">English Setter</option><option value="107">English Sheepdog</option><option value="108">English Shepherd</option><option value="109">English Springer Spaniel</option><option value="110">English Toy Spaniel</option><option value="111">Entlebucher</option><option value="112">Eskimo Dog</option><option value="113">Eskimo Spitz</option><option value="114">Eurasier</option><option value="115">Feist</option><option value="116">Field Spaniel</option><option value="117">Fila Brasileiro</option><option value="118">Finnish Lapphund</option><option value="119">Finnish Spitz</option><option value="120">Flat-coated Retriever</option><option value="121">Fox Terrier</option><option value="122">Foxhound</option><option value="123">French Brittany</option><option value="124">French Bulldog</option><option value="125">French Mastiff</option><option value="126">Galgo Spanish Greyhound</option><option value="127">German Pinscher</option><option value="128">German Shepherd Dog</option><option value="129">German Shorthaired Pointer</option><option value="130">German Spitz</option><option value="131">German Wirehaired Pointer</option><option value="132">Giant Schnauzer</option><option value="133">Glen of Imaal Terrier</option><option value="134">Golden Retriever</option><option value="135">Gordon Setter</option><option value="136">Great Dane</option><option value="137">Great Pyrenees</option><option value="138">Greater Swiss Mountain Dog</option><option value="139">Greyhound</option><option value="140">Halden Hound (Haldenstrover)</option><option value="141">Harrier</option><option value="142">Havanese</option><option value="143">Hollandse Tulphond</option><option value="144">Hound</option><option value="145">Hovawart</option><option value="146">Husky</option><option value="147">Ibizan Hound</option><option value="148">Illyrian Sheepdog</option><option value="149">Irish Setter</option><option value="150">Irish Terrier</option><option value="151">Irish Water Spaniel</option><option value="152">Irish Wolfhound</option><option value="153">Italian Greyhound</option><option value="154">Italian Mastiff</option><option value="155">Italian Spinone</option><option value="156">Jack Russell Terrier</option><option value="157">Jack Russell Terrier (Parson Russell Terrier)</option><option value="158">Japanese Chin</option><option value="159">Jindo (Korean)</option><option value="160">Kai Dog</option><option value="161">Karelian Bear Dog</option><option value="162">Keeshond</option><option value="163">Kerry Blue Terrier</option><option value="164">Kishu</option><option value="165">Klee Kai</option><option value="166">Komondor</option><option value="167">Kuvasz</option><option value="168">Kyi Leo</option><option value="169">Labrador Retriever</option><option value="170">Lakeland Terrier</option><option value="171">Lancashire Heeler</option><option value="172">Leonberger</option><option value="173">Lhasa Apso</option><option value="174">Löwchen</option><option value="175">Maltese</option><option value="176">Manchester Terrier</option><option value="177">Maremma Sheepdog</option><option value="178">Markiesje</option><option value="179">Mastiff</option><option value="180">McNab</option><option value="181">Mexican Hairless</option><option value="182">Miniature Bull Terrier</option><option value="183">Miniature Pinscher</option><option value="184">Miniature Schnauzer</option><option value="185">Mountain Cur</option><option value="186">Mountain Dog</option><option value="187">Munsterlander</option><option value="188">Neapolitan Mastiff</option><option value="189">New Guinea Singing Dog</option><option value="190">Newfoundland Dog</option><option value="191">Norfolk Terrier</option><option value="192">Norwegian Buhund</option><option value="193">Norwegian Elkhound</option><option value="194">Norwegian Lundehund</option><option value="195">Norwich Terrier</option><option value="196">Nova Scotia Duck-Tolling Retriever</option><option value="197">Old English Sheepdog</option><option value="198">Otterhound</option><option value="199">Papillon</option><option value="200">Parson Russell Terrier</option><option value="201">Patterdale Terrier (Fell Terrier)</option><option value="202">Pekingese</option><option value="203">Pembroke Welsh Corgi</option><option value="204">Peruvian Inca Orchid</option><option value="205">Peruvian Inca Orchid</option><option value="206">Petit Basset Griffon Vendeen</option><option value="207">Pharaoh Hound</option><option value="208">Picardy Shepherd</option><option value="209">Pit Bull Terrier</option><option value="210">Plott Hound</option><option value="211">Podengo Portugueso</option><option value="212">Pointer</option><option value="213">Polish Lowland Sheepdog</option><option value="214">Pomeranian</option><option value="215">Poodle (Miniature)</option><option value="216">Poodle (Standard)</option><option value="217">Poodle (T-Cup)</option><option value="218">Poodle (Toy)</option><option value="219">Poodle (unknown type)</option><option value="220">Portuguese Water Dog</option><option value="221">Presa Canario</option><option value="222">Pug</option><option value="223">Puli</option><option value="224">Pumi</option><option value="225">Queensland Heeler</option><option value="226">Rat Terrier</option><option value="227">Red Heeler</option><option value="228">Redbone Coonhound</option><option value="229">Retriever</option><option value="230">Rhodesian Ridgeback</option><option value="231">Rottweiler</option><option value="232">Russian Wolfhound</option><option value="233">Saarlooswolfhond</option><option value="234">Saint Bernard</option><option value="235">Saluki</option><option value="236">Saluki Greyhound</option><option value="237">Samoyed</option><option value="238">Schiller Hound</option><option value="239">Schipperke</option><option value="240">Schnauzer</option><option value="241">Scottish Deerhound</option><option value="242">Scottish Terrier Scottie</option><option value="243">Sealyham Terrier</option><option value="244">Setter</option><option value="245">Shar Pei</option><option value="246">Sheep Dog</option><option value="247">Shepherd</option><option value="248">Shetland Sheepdog Sheltie</option><option value="249">Shiba Inu</option><option value="250">Shih Tzu</option><option value="251">Siberian Husky</option><option value="252">Silky Terrier</option><option value="253">Skye Terrier</option><option value="254">Sloughi</option><option value="255">Smooth Fox Terrier</option><option value="256">Soft-Coated Wheaten Terrier</option><option value="257">South Russian Ovcharka</option><option value="258">Spaniel</option><option value="259">Spanish Mastiff</option><option value="260">Spinone Italiano</option><option value="261">Spitz</option><option value="262">Springer Spaniel</option><option value="263">Staffordshire Bull Terrier</option><option value="264">Sussex Spaniel</option><option value="265">Swedish Vallhund</option><option value="266">Terrier</option><option value="267">Thai Ridgeback</option><option value="268">Tibetan Mastiff</option><option value="269">Tibetan Spaniel</option><option value="270">Tibetan Terrier</option><option value="271">Tosa Inu</option><option value="272">Toy Fox Terrier</option><option value="273">Toy Terrier</option><option value="274">Treeing Walker Coonhound</option><option value="275">Vizsla</option><option value="276">Weimaraner</option><option value="277">Welsh Corgi</option><option value="278">Welsh Springer Spaniel</option><option value="279">Welsh Terrier</option><option value="280">West Highland White Terrier Westie</option><option value="281">Wheaten Terrier</option><option value="282">Whippet</option><option value="283">White German Shepherd</option><option value="284">Wire-haired Pointing Griffon</option><option value="285">Wirehaired Fox Terrier</option><option value="286">Wolf Dog</option><option value="287">Xoloitzcuintle/Mexican Hairless</option><option value="288">Yellow Labrador Retriever</option><option value="289">Yorkshire Terrier Yorkie</option></select>
-=end
   gender =
     case target_gender.downcase
     when 'male' then 1
@@ -55,7 +343,7 @@ Adoptable::Job.new(name).run do |target_species, target_breeds, target_exclude_b
 
   ads.reject! { |ad| target_exclude_breeds.any? { |b| !ad["breed"].upcase[b.upcase].nil? } }
 
-  all_ads += ads.map { |ad| Adoptable::Ad.new(name, ad["id"], time -= 24 * 60 * 60, ad["card_avatar"], "https://www.allpaws.com#{ad["profile_path"]}", ad["location"], notes) }
+  all_ads += ads.map { |ad| Adoptable::Ad.new(name, ad["id"], time -= 24 * 60 * 60, ad["breed"], ad["card_avatar"], "https://www.allpaws.com#{ad["profile_path"]}", ad["location"], notes) }
  end
 
  all_ads

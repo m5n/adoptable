@@ -5,7 +5,23 @@ class Dashing.Ad extends Dashing.Widget
       timestamp.toLocaleString()
 
   onData: (data) ->
+    addMark = false
+    addAkc = false
+
+    # TODO: remove before checkin
+    if data.ad_src && data.ad_src.startsWith('AKC ')
+      addMark = true
+      addAkc = true
+     
     now = new Date()
     date = new Date(data.time * 1000)
     if now.toDateString() == date.toDateString()
+      addMark = true
+
+    if addMark
       $(@get('node')).addClass 'mark'
+      if addAkc
+        $(@get('node')).find('.mark').text('AKC')
+    else
+      $(@get('node')).find('.mark').text('Update!')
+      $(@get('node')).removeClass('mark')

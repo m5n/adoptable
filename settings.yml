@@ -1,20 +1,65 @@
-results: 100
+results: 250
 queries:
 -
-  # Southern California: (center: Hesperia, CA)
-  zip: 92345
+  # Northern California: Cotati, CA
+  zip: 94931
   species: dog
-  breeds: ["Maltese", "Yorkshire"]
+  breeds: ["Cavalier King Charles Spaniel", "Italian Greyhound"]
   exclude_breeds: ["Chihuahua"]
-  gender: female
+  gender: male
   age: puppy
   distance: 200
 -
-  # Arizona (center: Payson, AZ)
-  zip: 85541
+  # Southern California: Boron, CA
+  zip: 93516
   species: dog
-  breeds: ["Maltese", "Yorkshire"]
+  breeds: ["Cavalier King Charles Spaniel", "Italian Greyhound"]
   exclude_breeds: ["Chihuahua"]
-  gender: female
+  gender: male
+  age: puppy
+  distance: 200
+-
+  # Colorado: Lake George, CO
+  zip: 80827
+  species: dog
+  breeds: ["Cavalier King Charles Spaniel", "Italian Greyhound"]
+  exclude_breeds: ["Chihuahua"]
+  gender: male
   age: puppy
   distance: 240
+-
+  # Nevada: Austin, NV
+  zip: 89310
+  species: dog
+  breeds: ["Cavalier King Charles Spaniel", "Italian Greyhound"]
+  exclude_breeds: ["Chihuahua"]
+  gender: male
+  age: puppy
+  distance: 240
+-
+  # New Mexico: Silio, NM
+  zip: 87063
+  species: dog
+  breeds: ["Cavalier King Charles Spaniel", "Italian Greyhound"]
+  exclude_breeds: ["Chihuahua"]
+  gender: male
+  age: puppy
+  distance: 240
+-
+  # Eastern Washington: Almira, WA
+  zip: 99103
+  species: dog
+  breeds: ["Cavalier King Charles Spaniel", "Italian Greyhound"]
+  exclude_breeds: ["Chihuahua"]
+  gender: male
+  age: puppy
+  distance: 110
+-
+  # Western Washington: Portage, WA
+  zip: 98070
+  species: dog
+  breeds: ["Cavalier King Charles Spaniel", "Italian Greyhound"]
+  exclude_breeds: ["Chihuahua"]
+  gender: male
+  age: puppy
+  distance: 120

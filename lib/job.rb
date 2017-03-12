@@ -2,15 +2,17 @@ require File.expand_path('../../lib/ad', __FILE__)
 
 module Adoptable
   class Job
+    @@published = []
     @@dir = File.expand_path('../../ads', __FILE__)
 
     def initialize(name)
       @name = name
 
       # Make sure jobs run every hour, but not all at the same time
-      @delay = (5 * 60 * Random::rand).round   # Spread out over 5 minutes
+      @delay = (10 * 60 * Random::rand).round   # Spread out over 10 minutes
 
       Dir.mkdir(@@dir) if !Dir.exists?(@@dir)
+      @@published.push(@name)
 
       p "#{@name}: job created (first run in #{@delay} seconds)"
     end
@@ -30,7 +32,10 @@ module Adoptable
           ads += yield(q["species"], q["breeds"], q["exclude_breeds"], q["gender"], q["age"], q["zip"], q["distance"])
         end
 
-        ads.uniq! { |a| a.id }
+        # TODO: make this work: ads.uniq!
+        ads.uniq! &:id # TODO: remove if the previous works { |a| a.id }
+
+        # TODO: remove ads older than age asked for: now = Time.now
 
         p "#{@name}: writing #{ads.length} ads in #{Time.now.to_i - time} seconds"
         File.open File.join(@@dir, "#{@name}.ads"), "w" do |f|
@@ -38,6 +43,10 @@ module Adoptable
         end
 
         publish if ads.length > 0
+
+        @@published.delete(@name)
+        p "**************************************** ALL JOBS HAVE PUBLISHED ****************************************" if @@published.empty?
+        # TODO: send event so UI can show this in alert
       end
     end
 
@@ -58,7 +67,7 @@ module Adoptable
       end
 
       if ads.length < Sinatra::Application.settings.results then
-        empty_ad = Adoptable::Ad.new(nil, nil, nil, nil, nil, nil).to_hash
+        empty_ad = Adoptable::Ad.new(nil, nil, nil, nil, nil, nil, nil).to_hash
 
         (Sinatra::Application.settings.results - ads.length).times do |index|
           index = index + ads.length
